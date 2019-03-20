@@ -43,27 +43,37 @@
                 columns: [{
                     title: "First name",
                     target: 0,
-
+                    data: function(item){
+                        return item.firstname
+                    }
                 }, {
                     title: "Last name",
                     target: 1,
-
+                    data: function(item){
+                        return item.lastname
+                    }
                 }, {
                     title: "Gender",
                     target: 2,
-
+                    data: function(item){
+                        return item.gender
+                    }
                 }, {
                     title: "Address",
                     target: 3,
-
+                    data: function(item){
+                        return item.address
+                    }
                 }, {
                     title: "Date of birth",
                     target: 4,
-
+                    data: function(item){
+                        return item.bod
+                    }
                 },{
                     title: "Action",
                     target: 5,
-
+                    
                 }]
             });
 
