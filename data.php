@@ -1,6 +1,6 @@
 <?php
     include "koneksi.php";
-	$sql_select = "SELECT * FROM contact";
+	$sql_select = "SELECT * FROM person";
     $stmt = $conn->query($sql_select);
 	$registrants = $stmt->fetchAll();
 	if(count($registrants) > 0) {
