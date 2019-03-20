@@ -2,7 +2,7 @@
     include "koneksi.php";
 	$sql_select = "SELECT * FROM person";
     $stmt = $conn->query($sql_select);
-	$registrants = $stmt->fetchAll();
+	$registrants = $stmt->fetch(PDO::FETCH_ASSOC);
 	if(count($registrants) > 0) {
 		echo json_encode($registrants);
 	}else{
