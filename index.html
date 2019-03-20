@@ -16,8 +16,10 @@
     <div class="container">
         <h1 style="font-size:20pt">Azure Web Dicoding</h1>
         <br />
-        <button class="btn btn-success" href="javascript:void(0)" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i> Add Person</button>
-        <button class="btn btn-default" href="javascript:void(0)" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i> Reload</button>
+        <button class="btn btn-success" href="javascript:void(0)" onclick="add_person()"><i class="glyphicon glyphicon-plus"></i>
+            Add Person</button>
+        <button class="btn btn-default" href="javascript:void(0)" onclick="reload_table()"><i class="glyphicon glyphicon-refresh"></i>
+            Reload</button>
         <br />
         <br />
         <table class="table table-striped table-bordered tperson" cellspacing="0" width="100%">
@@ -32,58 +34,57 @@
         crossorigin="anonymous"></script>
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
-            var table;
-            table = $(".tperson").DataTable({
-                serverSide: true,
-                ajax: {
-                    url: "data.php",
-                    type: "POST"
-                },
-                columns: [{
-                    title: "First name",
-                    target: 0,
-                    data: function(item){
-                        return item.firstname
-                    }
-                }, {
-                    title: "Last name",
-                    target: 1,
-                    data: function(item){
-                        return item.lastname
-                    }
-                }, {
-                    title: "Gender",
-                    target: 2,
-                    data: function(item){
-                        return item.gender
-                    }
-                }, {
-                    title: "Address",
-                    target: 3,
-                    data: function(item){
-                        return item.address
-                    }
-                }, {
-                    title: "Date of birth",
-                    target: 4,
-                    data: function(item){
-                        return item.bod
-                    }
-                },{
-                    title: "Action",
-                    target: 5,
+        var table;
+        table = $(".tperson").DataTable({
+            serverSide: true,
+            ajax: {
+                url: "data.php",
+                type: "POST"
+            },
+            columns: [{
+                title: "First name",
+                target: 0,
+                data: function (item) {
+                    return item.firstname
+                }
+            }, {
+                title: "Last name",
+                target: 1,
+                data: function (item) {
+                    return item.lastname
+                }
+            }, {
+                title: "Gender",
+                target: 2,
+                data: function (item) {
+                    return item.gender
+                }
+            }, {
+                title: "Address",
+                target: 3,
+                data: function (item) {
+                    return item.address
+                }
+            }, {
+                title: "Date of birth",
+                target: 4,
+                data: function (item) {
+                    return item.bod
+                }
+            }, {
+                title: "Action",
+                target: 5,
 
-                }]
-            });
+            }]
         });
-        function add_person(){
-                alert("telo");
-            }
 
-            function reload_table(){
-                alert("Wedus");
-            }
+        function add_person() {
+            alert("telo");
+        }
+
+        function reload_table() {
+            alert("Wedus");
+        }
     </script>
 </body>
 
