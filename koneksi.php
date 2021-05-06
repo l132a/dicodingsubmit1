@@ -1,8 +1,8 @@
 <?php
-    $host = "smart-dev.database.windows.net";
-    $user = "suryo";
-    $pass = "L132aboy";
-    $db = "suryodicoding";
+    $host = "";
+    $user = "";
+    $pass = "";
+    $db = "";
 
     try {
         $conn = new PDO("sqlsrv:server = $host; Database = $db", $user, $pass);
